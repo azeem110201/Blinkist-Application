@@ -37,6 +37,10 @@ const Container = styled("div")({
   backgroundColor: "#F1F6F4",
   display: "flex",
   flexDirection: "column",
+  position: "relative",
+  left: 0,
+  bottom: 0,
+  right: 0,
 });
 
 const InnerFrame = styled("div")({

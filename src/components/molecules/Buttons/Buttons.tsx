@@ -33,6 +33,7 @@ interface Props {
   children: React.ReactNode;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
+  onClick?: () => void;
 }
 
 const Buttons = (props: Props) => {
@@ -46,6 +47,7 @@ const Buttons = (props: Props) => {
       className={classes.connectButton}
       href={props.href}
       style={props.style}
+      onClick={props.onClick}
     >
       {props.children}
     </Button>

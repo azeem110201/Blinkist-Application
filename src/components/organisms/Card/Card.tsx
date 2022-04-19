@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@mui/styles";
 import { createTheme, ThemeProvider } from "@mui/material";
 import styled from "@emotion/styled";
@@ -8,6 +8,8 @@ import Button from "../../molecules/Buttons/Buttons";
 import { ReactComponent as Time } from "../../../images/time.svg";
 import { ReactComponent as User } from "../../../images/user.svg";
 import { ReactComponent as Add } from "../../../images/add.svg";
+import api from "../../../api/api";
+import { DataObject } from "../BookDescription/BookDescription";
 
 const theme = createTheme({
   components: {
@@ -143,6 +145,21 @@ const Card = (props: Props) => {
   const [linkStyle, setLinkStyle] = useState({});
   const [iconStyle, setIconStyle] = useState({});
 
+  const [bookData, setBookData] = useState<DataObject>({
+    id: 1,
+    title: "",
+    author: "",
+    image: "",
+    time: "",
+    read: "",
+    state: {
+      isFinished: false,
+      isTrending: false,
+      isFeatured: false,
+      justAdded: false,
+    },
+  });
+
   const handleMouseEnter = () => {
     setMouseState(true);
     setLinkStyle({
@@ -163,6 +180,33 @@ const Card = (props: Props) => {
     });
     setIconStyle({});
   };
+
+  const addToCurrentlyReading = async () => {
+    bookData.state.isFinished = true;
+    bookData.state.isTrending = false;
+    await api.put(`/library/${10}`, bookData);
+  }
+
+  const updateFinish = async (num: number) => {
+    if (bookData.state.isFinished) {
+      bookData.state.isFinished = false;
+    } else {
+      bookData.state.isFinished = true;
+    }
+    await api.put(`/library/${num}`, bookData);
+  };
+
+  useEffect(() => {
+    const getData = async (val: number) => {
+      const response = await api.get(`/library/${val}`);
+      const mydata = response.data;
+      setBookData(mydata);
+    };
+
+    return () => {
+      getData(props.value);
+    }
+  }, [bookData, props.value]);
 
   const style = useStyles();
   return (
@@ -196,13 +240,13 @@ const Card = (props: Props) => {
           </div>
 
           {props.isFinished ? (
-            <Typography variant="body1" className={style.finished}>
+            <Typography variant="body1" className={style.finished} onClick={() => updateFinish(props.value)}>
               Finished
             </Typography>
           ) : null}
 
           {props.readAgain ? (
-            <Typography variant="body1" className={style.finished}>
+            <Typography variant="body1" className={style.finished} onClick={() => updateFinish(props.value)}>
               Read Again
             </Typography>
           ) : null}
@@ -213,6 +257,7 @@ const Card = (props: Props) => {
               className={style.addButton}
               onMouseEnter={() => handleMouseEnter}
               onMouseLeave={() => handleMouseLeave}
+              onClick={() => addToCurrentlyReading}
             >
               <IconTypography
                 iconSrc={<Add style={iconStyle} />}

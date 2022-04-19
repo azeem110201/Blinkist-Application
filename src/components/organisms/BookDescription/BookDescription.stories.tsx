@@ -1,11 +1,11 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { createTheme, ThemeProvider } from "@mui/material";
-import BookDescription from "./BookDescription";
+import BookView from "./BookDescription";
 
 export default {
-  title: "Organisms/Book View",
-  component: BookDescription,
-} as ComponentMeta<typeof BookDescription>;
+  title: "Book View",
+  component: BookView,
+} as ComponentMeta<typeof BookView>;
 
 const theme = createTheme({
   components: {
@@ -56,11 +56,11 @@ const theme = createTheme({
   },
 });
 
-const Template: ComponentStory<typeof BookDescription> = () => (
+const Template: ComponentStory<typeof BookView> = () => (
   <ThemeProvider theme={theme}>
-    <BookDescription />
+    <BookView />
   </ThemeProvider>
 );
 
-export const BookDescriptionStory = Template.bind({});
-BookDescriptionStory.args = {};
+export const BookViewStory = Template.bind({});
+BookViewStory.args = {};

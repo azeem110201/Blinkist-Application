@@ -7,12 +7,17 @@ import Constants from "../../data/Constants";
 
 const LibraryPage = () => {
   return (
-    <MyLibrary
-      header={<Header />}
-      heading={<Typography variant="h1">{Constants.header.heading}</Typography>}
-      tab={<Tabs />}
-      footer={<Footer />}
-    />
+    <>
+      <MyLibrary
+        header={<Header />}
+        heading={
+          <Typography variant="h1">{Constants.header.heading}</Typography>
+        }
+        tab={<Tabs />}
+        // footer={<Footer />}
+      />
+      <Footer />
+    </>
   );
 };
 

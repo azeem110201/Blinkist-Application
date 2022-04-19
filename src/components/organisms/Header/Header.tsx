@@ -3,12 +3,14 @@ import { Container, createTheme, ThemeProvider } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import styled from "@mui/styles/styled/styled";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Typography from "../../atoms/typography/Typography";
 import Dropdown from "../../molecules/DropDown/DropDown";
 import Constants from "../../../data/Constants";
 import Icon from "../../atoms/IconButton/IconButton";
 import Logo from "../../atoms/icons/Icons";
 import SearchIcon from "../../../images/search.svg";
+import ExtendedNav from "../../organisms/ExtendedNav/index";
 
 const theme = createTheme({
   components: {
@@ -28,12 +30,13 @@ const theme = createTheme({
 });
 
 const RootContainer = styled("div")({
-  width: "100%",
+  width: "912px",
   height: "86px",
   backgroundColor: "#FFFFFF",
   display: "flex",
   flexDirection: "row",
   gap: "40px",
+  margin: "0 auto",
 });
 
 const useStyles = makeStyles({
@@ -77,6 +80,8 @@ const Header = (props: Props) => {
     transform: "rotate(0deg)",
   });
 
+  const navigate = useNavigate();
+
   const showExploreDropdown = () => {
     showExplore ? setShowExplore(false) : setShowExplore(true);
 
@@ -113,7 +118,7 @@ const Header = (props: Props) => {
               onClick={showExploreDropdown}
               style={exploreIconStyle}
             />
-            <Typography variant="body1" className={style.library}>
+            <Typography variant="body1" className={style.library} onClick={() => navigate("/")}>
               {Constants.header.link2}
             </Typography>
 
@@ -125,6 +130,7 @@ const Header = (props: Props) => {
             />
           </RootContainer>
         </Container>
+        {showExplore ? <ExtendedNav /> : null}
       </ThemeProvider>
     </>
   );

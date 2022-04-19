@@ -9,6 +9,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Card from "../Card/Card";
 import { styled, makeStyles } from "@mui/styles";
 import api from "../../../api/api";
+import { DataObject } from "../BookDescription/BookDescription";
 
 const tabTheme = createTheme({
   components: {
@@ -49,24 +50,9 @@ const CardStyled = styled("div")({
   marginLeft: "-24px",
 });
 
-interface Props {
-  id: number;
-  title: string;
-  author: string;
-  image: string;
-  time: string;
-  read: string;
-  state: {
-    isFinished: boolean;
-    isTrending: boolean;
-    justAdded: boolean;
-    isFeatured: boolean;
-  };
-}
-
 const LabTabs = () => {
   const [value, setValue] = useState<string>("1");
-  const [finishCard, setFinishCard] = useState<Props[]>([
+  const [finishCard, setFinishCard] = useState<DataObject[]>([
     {
       id: 0,
       title: "",

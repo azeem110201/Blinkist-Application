@@ -41,6 +41,8 @@ const BannerContainer = styled("div")({
   backgroundColor: "#F1F6F4",
   display: "flex",
   gap: "112px",
+  margin: "0 auto",
+  // position: "relative",
 });
 
 const LeftBannerContainer = styled("div")({

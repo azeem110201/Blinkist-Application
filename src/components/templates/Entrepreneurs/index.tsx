@@ -28,10 +28,19 @@ const theme = createTheme({
   },
 });
 
+const BannerSearch = styled("div")({
+  display: "flex",
+  flexDirection: "column",
+  gap: "58px",
+});
+
 const useStyles = makeStyles({
   banner: {
     position: "relative",
     top: "32px",
+  },
+  search: {
+    marginLeft: "264px",
   },
 });
 
@@ -66,8 +75,11 @@ const Entreprenuer = (props: EntrepreneurProps) => {
     <>
       <ThemeProvider theme={theme}>
         {props.header}
-        <div className={style.banner}>{props.banner}</div>
-        {props.search}
+
+        <BannerSearch className={style.banner}>
+          {props.banner}
+          <div className={style.search}>{props.search}</div>
+        </BannerSearch>
         <FirstSection>{props.firstSection}</FirstSection>
         <SecondSection>{props.secondSection}</SecondSection>
         <ThirdSection>{props.thirdSection}</ThirdSection>

@@ -1,6 +1,6 @@
 import Entreprenuer from "../../components/templates/Entrepreneurs/index";
 import Header from "../../components/organisms/Header/Header";
-import Banner from "../../components/organisms/Banner/Banner";
+import Banner from "../../components/molecules/Banner/Banner";
 import SearchBar from "../../components/molecules/SearchBar/SearchBar";
 import DisplayCard from "../../components/organisms/DisplayCards/index";
 import Footer from "../../components/organisms/Footer/Footer";

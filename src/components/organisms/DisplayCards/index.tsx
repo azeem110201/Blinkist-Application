@@ -3,6 +3,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import { styled, makeStyles } from "@mui/styles";
 import Card from "../Card/Card";
 import Typography from "../../atoms/typography/Typography";
+import { useNavigate } from "react-router-dom";
 
 interface Props{
   id: number;
@@ -64,10 +65,27 @@ const BookStyled = styled("div")({
 
 const DisplayCard = (props: CardProps) => {
   const [showData, setShowData] = useState(props.data);
+
+  useEffect(() => {
+    if (props.state === "trending") {
+      setShowData(showData.filter(item => item.state.isTrending));
+    } else {
+      props.state === "featured"
+        ? setShowData(showData.filter(item => item.state.isFeatured))
+        : setShowData(showData.filter(item => item.state.justAdded));
+    }
+  }, [showData, props.state]);
+
+  const navigate = useNavigate();
+
   const style = useStyles();
 
   const showBookDetails = (index: number) => {
-    console.log(`Book Details for ${index}`);
+    // if (index === 1) {
+       navigate("/book-details");
+    // } else {
+    //   navigate("/");
+    // }
   }
   return (
     <>

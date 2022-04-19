@@ -134,10 +134,10 @@
       "read": "1.9k reads",
       "image": "images/coverImages/beyondEntrepreneurship.svg",
       "state": {
-        "isFinished": true,
-        "isTrending": true,
+        "isFinished": false,
+        "isTrending": false,
         "justAdded": false,
-        "isFeatured": true
+        "isFeatured": false
       }
     },
     {
