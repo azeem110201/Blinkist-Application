@@ -64,7 +64,7 @@
       "read": "",
       "image": "images/coverImages/livesOfStoics.svg",
       "state": {
-        "isFinished": false,
+        "isFinished": true,
         "isTrending": true,
         "justAdded": false,
         "isFeatured": false
@@ -134,7 +134,7 @@
       "read": "1.9k reads",
       "image": "images/coverImages/beyondEntrepreneurship.svg",
       "state": {
-        "isFinished": false,
+        "isFinished": true,
         "isTrending": false,
         "justAdded": false,
         "isFeatured": false

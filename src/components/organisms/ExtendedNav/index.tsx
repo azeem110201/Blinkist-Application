@@ -5,6 +5,7 @@ import Typography from "../../atoms/typography/Typography";
 import NavData from "../../../data/ExtendedNavData";
 import IconWithTypography from "../../molecules/IconTypography/IconTypography";
 import { useState, useEffect } from "react";
+// import theme from '../../theme/theme';
 
 const theme = createTheme({
   components: {

@@ -10,27 +10,28 @@ import Card from "../Card/Card";
 import { styled, makeStyles } from "@mui/styles";
 import api from "../../../api/api";
 import { DataObject } from "../BookDescription/BookDescription";
+import theme from '../../theme/theme';
 
-const tabTheme = createTheme({
-  components: {
-    MuiTab: {
-      styleOverrides: {
-        root: {
-          textTransform: "capitalize",
-          placeItems: "flex-start",
-          fontFamily: "Cera Pro",
-          fontSize: "18px",
-          lineHeight: "23px",
-        },
-      },
-    },
-  },
-  palette: {
-    primary: {
-      main: "#22C870",
-    },
-  },
-});
+// const tabTheme = createTheme({
+//   components: {
+//     MuiTab: {
+//       styleOverrides: {
+//         root: {
+//           textTransform: "capitalize",
+//           placeItems: "flex-start",
+//           fontFamily: "Cera Pro",
+//           fontSize: "18px",
+//           lineHeight: "23px",
+//         },
+//       },
+//     },
+//   },
+//   palette: {
+//     primary: {
+//       main: "#22C870",
+//     },
+//   },
+// });
 
 const useStyles = makeStyles({
   root: {
@@ -86,7 +87,7 @@ const LabTabs = () => {
 
   return (
     <>
-      <ThemeProvider theme={tabTheme}>
+      <ThemeProvider theme={theme}>
         <Box
           sx={{
             typography: "body1",
@@ -123,6 +124,7 @@ const LabTabs = () => {
                   .map((card, index) => {
                     return (
                       <Card
+                      data-testid="card-2"
                         key={index}
                         title={card.title}
                         author={card.author}

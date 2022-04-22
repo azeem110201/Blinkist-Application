@@ -1,7 +1,6 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import Button from "./Buttons";
-import Typography from "../../atoms/typography/Typography";
-import { ThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider, createTheme, Typography } from "@mui/material";
 
 const theme = createTheme({
   components: {

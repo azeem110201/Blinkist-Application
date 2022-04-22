@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, createTheme, ThemeProvider } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import styled from "@mui/styles/styled/styled";
+import { styled } from "@mui/styles";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Typography from "../../atoms/typography/Typography";
@@ -11,23 +11,24 @@ import Icon from "../../atoms/IconButton/IconButton";
 import Logo from "../../atoms/icons/Icons";
 import SearchIcon from "../../../images/search.svg";
 import ExtendedNav from "../../organisms/ExtendedNav/index";
+import theme from '../../theme/theme';
 
-const theme = createTheme({
-  components: {
-    MuiTypography: {
-      styleOverrides: {
-        body1: {
-          fontFamily: "Cera Pro",
-          fontStyle: "normal",
-          fontWeight: "500",
-          fontSize: "16px",
-          lineHeight: "20px",
-          color: "#03314B",
-        },
-      },
-    },
-  },
-});
+// const theme = createTheme({
+//   components: {
+//     MuiTypography: {
+//       styleOverrides: {
+//         body1: {
+//           fontFamily: "Cera Pro",
+//           fontStyle: "normal",
+//           fontWeight: "500",
+//           fontSize: "16px",
+//           lineHeight: "20px",
+//           color: "#03314B",
+//         },
+//       },
+//     },
+//   },
+// });
 
 const RootContainer = styled("div")({
   width: "912px",

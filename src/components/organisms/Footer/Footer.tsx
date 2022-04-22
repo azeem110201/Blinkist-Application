@@ -1,34 +1,34 @@
-import { useEffect, useState } from "react";
-import styled from "@mui/styles/styled/styled";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { styled } from "@mui/styles";
+import { ThemeProvider } from "@mui/material";
 import Typography from "../../atoms/typography/Typography";
 import Logo from "../../atoms/icons/Icons";
 import FooterNav from "../FooterNav/FooterNav";
 import data from "../../../data/FooterNav";
 import Constants from "../../../data/Constants";
+import theme from '../../theme/theme';
 
-const theme = createTheme({
-  components: {
-    MuiTypography: {
-      styleOverrides: {
-        subtitle1: {
-          fontFamily: "Cera Pro",
-          fontWeight: "medium",
-          fontSize: "24px",
-          lineHeight: "32px",
-          color: "#0365F2",
-        },
-        caption: {
-          fontFamily: "Cera Pro",
-          fontWeight: "regular",
-          fontSize: "14px",
-          lineHeight: "22px",
-          color: "#6D787E",
-        },
-      },
-    },
-  },
-});
+// const theme = createTheme({
+//   components: {
+//     MuiTypography: {
+//       styleOverrides: {
+//         subtitle1: {
+//           fontFamily: "Cera Pro",
+//           fontWeight: "medium",
+//           fontSize: "24px",
+//           lineHeight: "32px",
+//           color: "#0365F2",
+//         },
+//         caption: {
+//           fontFamily: "Cera Pro",
+//           fontWeight: "regular",
+//           fontSize: "14px",
+//           lineHeight: "22px",
+//           color: "#6D787E",
+//         },
+//       },
+//     },
+//   },
+// });
 
 const Container = styled("div")({
   width: "100%",
@@ -50,8 +50,9 @@ const InnerFrame = styled("div")({
   position: "relative",
   top: "38px",
   display: "flex",
-  left: "244px",
+  // left: "244px",
   bottom: "108px",
+  margin: "0 auto",
 });
 
 const LeftFrame = styled("div")({
@@ -76,7 +77,8 @@ const BottomFrame = styled("div")({
   height: "22px",
   position: "relative",
   top: "48px",
-  left: "244px",
+  // left: "244px",
+  margin: "0 auto",
 });
 
 type Props = {};

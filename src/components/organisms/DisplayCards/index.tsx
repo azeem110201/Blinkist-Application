@@ -4,6 +4,7 @@ import { styled, makeStyles } from "@mui/styles";
 import Card from "../Card/Card";
 import Typography from "../../atoms/typography/Typography";
 import { useNavigate } from "react-router-dom";
+import theme from '../../theme/theme';
 
 interface Props{
   id: number;
@@ -26,22 +27,22 @@ interface CardProps {
   state?: string;
 }
 
-const theme = createTheme({
-  components: {
-    MuiTypography: {
-      styleOverrides: {
-        h3: {
-          fontFamily: "Cera Pro",
-          fontStyle: "normal",
-          fontWeight: "700",
-          fontSize: "24px",
-          lineHeight: "30px",
-          color: "#03314B",
-        },
-      },
-    },
-  },
-});
+// const theme = createTheme({
+//   components: {
+//     MuiTypography: {
+//       styleOverrides: {
+//         h3: {
+//           fontFamily: "Cera Pro",
+//           fontStyle: "normal",
+//           fontWeight: "700",
+//           fontSize: "24px",
+//           lineHeight: "30px",
+//           color: "#03314B",
+//         },
+//       },
+//     },
+//   },
+// });
 
 const useStyles = makeStyles({
   card: {

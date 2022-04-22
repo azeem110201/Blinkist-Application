@@ -90,10 +90,10 @@ const BookDescription = () => {
   };
 
   const handleRead = async (num: number) => {
-    bookData.state.isFinished = false;
-    bookData.state.isTrending = false;
-    bookData.state.isFeatured = false;
-    bookData.state.justAdded = false;
+    // bookData.state.isFinished = false;
+    // bookData.state.isTrending = false;
+    // bookData.state.isFeatured = false;
+    // bookData.state.justAdded = false;
     await api.put(`/library/${num}`, bookData);
     navigate("/")
   }
@@ -155,6 +155,7 @@ const BookDescription = () => {
                     height: "44px",
                     color: "#22C870",
                     border: "1px solid black",
+                    textTransform: "none",
                   }}
                   onClick={() => handleRead(10)}
                 >
@@ -168,6 +169,7 @@ const BookDescription = () => {
                     height: "44px",
                     backgroundColor: "#2CE080",
                     color: "black",
+                    textTransform: "none",
                     ...hoverStyle,
                   }}
                   onClick={() => handleFinish(10)}
@@ -184,6 +186,7 @@ const BookDescription = () => {
                     flexDirection: "row",
                     gap: "11px",
                     color: "#6D787E",
+                    textTransform: "none",
                   }}
                 >
                   <Typography variant="body1">

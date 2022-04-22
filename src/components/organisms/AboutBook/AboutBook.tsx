@@ -35,6 +35,11 @@ const theme = createTheme({
       },
     },
   },
+  palette: {
+    primary: {
+      main: "#22C870",
+    },
+  },
 });
 
 const useStyles = makeStyles({

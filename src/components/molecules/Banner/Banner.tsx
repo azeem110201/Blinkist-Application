@@ -1,9 +1,14 @@
 import React from "react";
-import { Container, createTheme, ThemeProvider } from "@mui/material";
+import {
+  Container,
+  createTheme,
+  ThemeProvider,
+  Typography,
+} from "@mui/material";
 import { styled } from "@mui/styles";
-import Typography from "../../atoms/typography/Typography";
 import banner from "../../../images/banner.svg";
 import Constants from "../../../data/Constants";
+import theme from "../../theme/theme";
 
 interface Props {
   className?: string;
@@ -11,29 +16,29 @@ interface Props {
   childrens?: React.ReactNode;
 }
 
-const theme = createTheme({
-  components: {
-    MuiTypography: {
-      styleOverrides: {
-        h1: {
-          fontFamily: "Cera Pro",
-          fontWeight: "bold",
-          fontSize: "36px",
-          lineHeight: "45px",
-          color: "#03314B",
-        },
+// const theme = createTheme({
+//   components: {
+//     MuiTypography: {
+//       styleOverrides: {
+//         h1: {
+//           fontFamily: "Cera Pro",
+//           fontWeight: "bold",
+//           fontSize: "36px",
+//           lineHeight: "45px",
+//           color: "#03314B",
+//         },
 
-        subtitle2: {
-          fontFamily: "Cera Pro",
-          fontWeight: "400px",
-          fontSize: "18px",
-          lineHeight: "22.63px",
-          color: "#6D787E",
-        },
-      },
-    },
-  },
-});
+//         subtitle2: {
+//           fontFamily: "Cera Pro",
+//           fontWeight: "400px",
+//           fontSize: "18px",
+//           lineHeight: "22.63px",
+//           color: "#6D787E",
+//         },
+//       },
+//     },
+//   },
+// });
 
 const BannerContainer = styled("div")({
   width: "912px",

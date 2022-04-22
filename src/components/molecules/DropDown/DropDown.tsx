@@ -1,9 +1,9 @@
 import Box from "@mui/material/Box";
 import { makeStyles } from "@mui/styles";
-import Typography from "../../atoms/typography/Typography";
 import Icons from "../../atoms/IconButton/IconButton";
 import { ReactComponent as ExpandIcon } from "../../../images/downarrow.svg";
 import { ReactComponent as Account } from "../../../images/account.svg";
+import { Typography } from "@mui/material";
 
 interface Props {
   title: string;
