@@ -43,6 +43,7 @@ const SearchBar = () => {
               placeholder="Search by title or author"
               className={classes.input}
               onChange={e => setSearch(e.target.value)}
+              value={search}
             />
           </SearchContainer>
         </Box>

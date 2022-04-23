@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/molecules/Buttons/Buttons.test.tsx">
+    <testCase name="Button Button display" duration="166"/>
+    <testCase name="Button Button with Icon Typography" duration="164"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/organisms/Card/Card.test.tsx">
+    <testCase name="Card Show Display Finised Card" duration="224"/>
+    <testCase name="Card Show Display Read Again Card" duration="101"/>
+    <testCase name="Card Show Display Add To Library Card" duration="234"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/organisms/BookDescription/BookDescription.test.tsx">
+    <testCase name="Book View test Button Finished Reading" duration="720"/>
+    <testCase name="Book View test Button Read Now" duration="248"/>
+    <testCase name="Book View test Should update api on click" duration="264"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/organisms/ExtendedNav/index.test.tsx">
+    <testCase name="Extended Nav test should display" duration="399"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/templates/BookDetail/index.test.tsx">
+    <testCase name="Book Detail test Should render" duration="432"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/molecules/SearchBar/SearchBar.test.tsx">
+    <testCase name="Search Bar test Display search bar" duration="185"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/molecules/SelectedTabs/SelectedTabs.test.tsx">
+    <testCase name="Selected Tabs Currently Reading" duration="106"/>
+    <testCase name="Selected Tabs Content" duration="19"/>
+    <testCase name="Selected Tabs Connected Services" duration="27"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/organisms/FooterNav/FooterNav.test.tsx">
+    <testCase name="Footer Nav display editorial nav items" duration="69"/>
+    <testCase name="Footer Nav display useful links nav items" duration="24"/>
+    <testCase name="Footer Nav display company nav items" duration="16"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/organisms/Tab/index.test.tsx">
+    <testCase name="Lab tab test should toggle between the tabs" duration="363"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/organisms/AboutBook/AboutBook.test.tsx">
+    <testCase name="Display Book Tab activate second tab when clicked" duration="225"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/organisms/Footer/Footer.test.tsx">
+    <testCase name="Footer logo display" duration="153"/>
+    <testCase name="Footer Footer Quote" duration="68"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/molecules/Banner/Banner.test.tsx">
+    <testCase name="Banner Banner display" duration="91"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/molecules/IconTypography/IconTypography.test.tsx">
+    <testCase name="Icon with Typography tests Add icon with Typography" duration="95"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/atoms/typography/Typography.test.tsx">
+    <testCase name="Display text Should be heading" duration="43"/>
+    <testCase name="Display text Should be body" duration="5"/>
+    <testCase name="Display text Should be subtitle" duration="5"/>
+    <testCase name="Display text Should be caption" duration="7"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/organisms/Header/Header.test.tsx">
+    <testCase name="Header tests before login should login" duration="208"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/atoms/IconButton/IconButton.test.tsx">
+    <testCase name="Icon Button Render Search Button" duration="143"/>
+    <testCase name="Icon Button Render dropdown" duration="29"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/molecules/DropDown/DropDown.test.tsx">
+    <testCase name="DropDown DropDown Explore" duration="158"/>
+    <testCase name="DropDown Account dropdown" duration="28"/>
+  </file>
+  <file path="/home/abdulazeem.mohd/Zemoso/Blinkist/new-blinkist/new-blinkist/src/components/atoms/icons/Icon.test.tsx">
+    <testCase name="Should display logo Display logo" duration="30"/>
+  </file>
+</testExecutions>

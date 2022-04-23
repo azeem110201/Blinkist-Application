@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import BookDetail from "./index";
 import Header from "../../organisms/Header/Header";
-import BookDescription from "../../organisms/BookDescription/BookDescription";
+import BookView from "../../organisms/BookDescription/BookDescription";
 import Footer from "../../organisms/Footer/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -15,7 +15,7 @@ describe("Book Detail test", () => {
             element={
               <BookDetail
                 header={<Header />}
-                bookView={<BookDescription />}
+                bookView={<BookView />}
                 footer={<Footer />}
               />
             }
